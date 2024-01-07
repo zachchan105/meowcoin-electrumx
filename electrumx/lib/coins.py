@@ -3912,24 +3912,22 @@ class Quebecoin(AuxPowMixin, Coin):
     REORG_LIMIT = 2000
     RPC_PORT = 10890
 
-    class PricecoinX(Coin):
+class PricecoinX(Coin):
     NAME = "PricecoinX"
     SHORTNAME = "PRCX"
     NET = "mainnet"
-    P2PKH_VERBYTE = bytes.fromhex("75")
-    P2SH_VERBYTES = [bytes.fromhex("78")]
-    WIF_BYTE = bytes.fromhex("80")
-    XPUB_VERBYTES = bytes.fromhex("800001C8")
-    XPRV_VERBYTES = bytes.fromhex("800001C8")
-    GENESIS_HASH = '00000e8048ffa0a80549ed405640e95e01590e70baf4888ef594d87402635697'
-    DESERIALIZER = lib_tx.DeserializerTxTimeSegWit
-    DAEMON = daemon.FakeEstimateFeeDaemon
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("37")
+    P2SH_VERBYTES = [bytes.fromhex("32"), bytes.fromhex("05")]
+    WIF_BYTE = bytes.fromhex("b7")
+    GENESIS_HASH = ('e96fe042f9a306b109b7276c47488fce'
+                    'afcbd98a4456676bcf42307087af30f2')
+    DESERIALIZER = lib_tx.DeserializerSegWit
     TX_COUNT = 1
     TX_COUNT_HEIGHT = 1
     TX_PER_BLOCK = 10
-    RPC_PORT = 24127
-    ESTIMATE_FEE = 0.001
-    RELAY_FEE = 0.01
-    REORG_LIMIT = 5000
+    RPC_PORT = 2332
+    REORG_LIMIT = 2000
     PEERS = []
     VALUE_PER_COIN = 1000000
