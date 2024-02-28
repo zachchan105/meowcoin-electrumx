@@ -650,6 +650,21 @@ class BitcoinGold(EquihashMixin, BitcoinMixin, Coin):
         else:
             return double_sha256(header[:68] + header[100:112])
 
+class Meowcoin(Coin):
+    NAME = "Meowcoin"
+    SHORTNAME = "MEWC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("32")
+    P2SH_VERBYTES = bytes.fromhex("7A")
+    WIF_BYTE = bytes.fromhex("70")
+    GENESIS_HASH = ('000000edd819220359469c54f2614b56'
+                    '02ebc775ea67a64602f354bdaa320f70')
+    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 1
+    RPC_PORT = 9766
+    PEERS = []
 
 class BitcoinGoldTestnet(BitcoinGold):
     FORK_HEIGHT = 1
