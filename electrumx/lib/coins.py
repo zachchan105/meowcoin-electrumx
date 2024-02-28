@@ -662,6 +662,7 @@ class Meowcoin(Coin):
     GENESIS_HASH = ('000000edd819220359469c54f2614b56'
                     '02ebc775ea67a64602f354bdaa320f70')
     TX_COUNT = 1
+    TX_PER_BLOCK = 6
     TX_COUNT_HEIGHT = 1
     RPC_PORT = 9766
     PEERS = []
