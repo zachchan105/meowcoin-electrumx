@@ -659,8 +659,8 @@ class Meowcoin(Coin):
     P2PKH_VERBYTE = bytes.fromhex("32")
     P2SH_VERBYTES = bytes.fromhex("7A")
     WIF_BYTE = bytes.fromhex("70")
-    GENESIS_HASH = ('000000edd819220359469c54f2614b56'
-                    '02ebc775ea67a64602f354bdaa320f70')
+    GENESIS_HASH = ('be26e9209db41bddb9cf45334706fdcb'
+                    '5ac4a8a03ce27f2a3a88533a2df525b2')
     TX_COUNT = 1
     TX_PER_BLOCK = 6
     TX_COUNT_HEIGHT = 1
